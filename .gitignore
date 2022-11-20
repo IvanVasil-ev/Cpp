@@ -1,0 +1,7 @@
+# Folders
+bin
+build
+CMakeFiles
+
+# Files
+CMakeCache.txt
