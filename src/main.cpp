@@ -1,8 +1,10 @@
 #include <iostream>
-#include "./math/math.hpp"
+#include "math/math.hpp"
+#include "math/print/print.hpp"
 
 int main()
 {
     std::cout << "Hello, World!" << std::endl;
-    Math::math::Sum(1, 2);
+    Print::print();
+    Math::Sum(1, 2);
 }

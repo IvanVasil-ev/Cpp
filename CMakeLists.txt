@@ -9,6 +9,10 @@ set(source_dir "${PROJECT_SOURCE_DIR}/src/")
 file(GLOB source_files
     "${source_dir}/*.cpp"
     "${source_dir}/*.hpp"
+    "${source_dir}/*/*.cpp"
+    "${source_dir}/*/*.hpp"
+    "${source_dir}/*/*/*.cpp"
+    "${source_dir}/*/*/*.hpp"
 )
 
 add_executable(main ${source_files})
