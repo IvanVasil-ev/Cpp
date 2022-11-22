@@ -7,7 +7,7 @@ yellow='\033[0;33m'
 clear='\033[0m'
 
 # Script
-if [ "dpkg -s cmake" ]; then
+if command -v cmake &> /dev/null; then
     [ -d build ] || mkdir build
     cmake . -Bbuild
     cmake --build ./build
