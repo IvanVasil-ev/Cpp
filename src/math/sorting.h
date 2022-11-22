@@ -1,7 +1,11 @@
 #include <iostream>
 
-class Print
-{
+namespace Math {
+
+class Sorting {
 public:
     static void print();
+
 };
+
+}

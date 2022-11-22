@@ -1,18 +1,17 @@
 cmake_minimum_required(VERSION 3.25)
 
-project(Cpp LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Werror -std=c++14")
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/build/bin")
-set(source_dir "${PROJECT_SOURCE_DIR}/src/")
-
-file(GLOB source_files
-    "${source_dir}/*.cpp"
-    "${source_dir}/*.hpp"
-    "${source_dir}/*/*.cpp"
-    "${source_dir}/*/*.hpp"
-    "${source_dir}/*/*/*.cpp"
-    "${source_dir}/*/*/*.hpp"
+project(cpp
+    LANGUAGES CXX
+    DESCRIPTION "Simple project with C++ code"
 )
 
-add_executable(main ${source_files})
+if (${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
+    message(FATAL_ERROR "Please do out-of-source builds.\n"
+                        "Cleanup: \"rm -rf CMake CMakeCache.txt CMakeFiles/\"")
+endif ()
+
+add_subdirectory(src)
