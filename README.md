@@ -1,3 +1,5 @@
-# C++
+# Repository for some c++ code
 
-C++ repository for some code
+**Dependencies:**
+
+- cmake `v3.25`
